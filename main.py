@@ -24,9 +24,9 @@ def generate_html_table(path):
 
     html += "</table>\n"
 
-    return html
+    return rows[1][0], html
 
-def make_html(path):
+def make_html(path, last_month, html_table):
     """creates an html file from a template"""
     site_template=f"""<!DOCTYPE html>
 <html lang="en">
@@ -39,16 +39,21 @@ def make_html(path):
 </head>
 <body>
     <h1>Caltrain Ridership</h1>
-    <p>Last updated: {date.today()}</p>
-    <p>Caltrain ridership data from July 2017 to Dec 2022</p>
-    <p>Source: <a href="https://www.caltrain.com/about/ridership.html">https://www.caltrain.com/about/ridership.html</a></p>
+    <p><em>Last updated: {date.today()}</em></p>    
+    <p>
+        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/board-of-directors/meetings">Caltrain Board of Directors meeting agendas</a>.
+        I made this site because it's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
+        Caltrain's official <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links out to a number of different sources but no simple unified view.
+    </p>
+    <p>
+        You can find a CSV of Caltrain's average weekday ridership and the script to generate this site on <a href="https://github.com/iechevarria/caltrain-ridership">GitHub</a>.
+        You can find more of my work on my website, <a href="https://echevarria.io">echevarria.io</a>.
+    </p>
     <h2>Graphs</h2>
     <img src="ridership-since-2020.png" alt="Caltrain Ridership">
     <img src="ridership-since-2017.png" alt="Caltrain Ridership">
-    <h2>Table</h2>
-    <div>
-    {generate_html_table("ridership.csv")}
-    </div>
+    <h2>Table (<a href="https://github.com/iechevarria/caltrain-ridership/blob/main/ridership.csv">CSV</a>)</h2>
+    {html_table}
 </body>
 """
     with open(path, "w") as f:
@@ -70,7 +75,8 @@ def make_plot(months, ridership, name):
 
 
 def main():
-    make_html("site/index.html")
+    last_month, table = generate_html_table("ridership.csv")
+    make_html("site/index.html", last_month, table)
 
     # plot ridership data
     with open("ridership.csv", "r") as f:
