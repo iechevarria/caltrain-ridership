@@ -17,12 +17,12 @@ def generate_html_table(path):
     html = "<table>\n"
 
     for row in rows:
-        html += "  <tr>\n"
+        html += "    <tr>\n"
         for col in row[:2]:
-            html += f"    <td>{col}</td>\n"
-        html += "  </tr>\n"
+            html += f"        <td>{col}</td>\n"
+        html += "    </tr>\n"
 
-    html += "</table>\n"
+    html += "    </table>"
 
     return rows[1][0], html
 
@@ -57,6 +57,7 @@ def make_html(path, last_month, html_table):
     {html_table}
     <br>
     <p><em>Site by <a href="https://echevarria.io">Ivan Echevarria</a></em>.</p>
+    <script data-goatcounter="https://caltrain-ridership.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 """
     with open(path, "w") as f:
