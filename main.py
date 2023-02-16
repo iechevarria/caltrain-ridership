@@ -41,12 +41,13 @@ def make_html(path, last_month, html_table):
     <h1>Caltrain Ridership</h1>
     <p><em>Last updated: {date.today()}</em></p>    
     <p>
-        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/board-of-directors/meetings">Caltrain Board of Directors meeting agendas</a>.
+        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a>.
         I made this site because it's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
         Caltrain's official <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links out to a number of different sources but no simple unified view.
+        Average weekday ridership is reported with a 1-month lag, so the most recent data is from {last_month}.
     </p>
     <p>
-        You can find a CSV of Caltrain's average weekday ridership and the script to generate this site on <a href="https://github.com/iechevarria/caltrain-ridership">GitHub</a>.
+        You can find a <a href="https://github.com/iechevarria/caltrain-ridership/blob/main/ridership.csv">CSV</a> of Caltrain's average weekday ridership and the script to generate this site on <a href="https://github.com/iechevarria/caltrain-ridership">GitHub</a>.
         You can find more of my work on my website, <a href="https://echevarria.io">echevarria.io</a>.
     </p>
     <h2>Graphs</h2>
@@ -54,6 +55,8 @@ def make_html(path, last_month, html_table):
     <img src="ridership-since-2017.png" alt="Caltrain Ridership">
     <h2>Table (<a href="https://github.com/iechevarria/caltrain-ridership/blob/main/ridership.csv">CSV</a>)</h2>
     {html_table}
+    <br>
+    <p><em>Site by <a href="https://echevarria.io">Ivan Echevarria</a></em>.</p>
 </body>
 """
     with open(path, "w") as f:
