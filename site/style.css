@@ -1,0 +1,38 @@
+/* make tables alternate light grey and white */
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+/* get rid of the border around the table */
+table {
+    border: none;
+}
+/* get rid of the border between columns */
+table tr td {
+    border: none;
+}
+/* make column 1 monospace */
+table {
+    font-family: monospace;
+}
+/* right align column 2 */
+table tr td:nth-child(2) {
+    text-align: right;
+}
+/* make page max 70em wide */
+body {
+    max-width: 48em;
+}
+/* make image 100% wide */
+img {
+    width: 100%;
+}
+/* add 6em at the bottom of the page */
+body {
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 6em;
+    /* font-size: 1.2em; */
+}
