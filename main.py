@@ -42,13 +42,22 @@ def make_html(path, last_month, html_table):
     <p><em>Last updated: {date.today()}</em></p>    
     <p>
         This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a>.
-        I made this site because it's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
-        Caltrain's official <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links out to a number of different sources but no simple unified view.
         Average weekday ridership is reported with a 1-month lag, so the most recent data is from {last_month}.
     </p>
     <p>
         You can find a <a href="https://github.com/iechevarria/caltrain-ridership/blob/main/ridership.csv">CSV</a> of Caltrain's average weekday ridership and the script to generate this site on <a href="https://github.com/iechevarria/caltrain-ridership">GitHub</a>.
         You can find more of my work on my website, <a href="https://echevarria.io">echevarria.io</a>.
+    </p>
+    <h2>Why I made this</h2>
+    <p>
+        It's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
+        Caltrain's official <a href="https://web.archive.org/web/20220629064038/https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links to three different sources, only one of which, the Caltrain Board of Directors monthly meeting agendas, is up-to-date.
+        Each agenda PDF has at most a year of ridership numbers, but some only have the actual average weekday ridership number for that specific month.
+        The format has changed several times, so it's not even doable to programmatically extract ridership numbers.
+        It shouldn't be this hard.
+    </p>
+    <p>
+        It took effort to collect these numbers in the real world – distributing them in a reasonable way should be the easy part. If Caltrain won't, I will.
     </p>
     <h2>Graphs</h2>
     <img src="ridership-since-2020.png" alt="Caltrain Ridership">
