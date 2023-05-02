@@ -52,12 +52,7 @@ def make_html(path, last_month, html_table):
     <p>
         It's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
         Caltrain's official <a href="https://web.archive.org/web/20220629064038/https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links to three different sources, only one of which, the Caltrain Board of Directors monthly meeting agendas, is up-to-date.
-        Each agenda PDF has at most a year of ridership numbers, but some only have the actual average weekday ridership number for that specific month.
-        The format has changed several times, so it's not even doable to programmatically extract ridership numbers.
-        It shouldn't be this hard.
-    </p>
-    <p>
-        It took effort to collect these numbers in the real world – distributing them in a reasonable way should be the easy part. If Caltrain won't, I will.
+        The agenda PDFs are not standardized, so I've manually extracted the ridership numbers from each one and made them available here.
     </p>
     <h2>Graphs</h2>
     <img src="ridership-since-2020.png" alt="Caltrain Ridership">
