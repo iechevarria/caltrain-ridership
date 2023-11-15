@@ -41,7 +41,7 @@ def make_html(path, last_month, html_table):
     <h1>Caltrain Ridership</h1>
     <p><em>Last updated: {date.today()}</em></p>    
     <p>
-        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a>.
+        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a> and JPB Citizens Advisory Committee documents.
         Average weekday ridership is reported with a 1-month lag, so the most recent data is from {last_month}.
     </p>
     <p>
