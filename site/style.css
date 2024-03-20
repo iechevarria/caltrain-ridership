@@ -17,6 +17,19 @@ table tr td:nth-child(2) {
 img {
     width: 100%;
 }
+.news {
+    background-color: #ffffcc;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    border-width: 1px;
+    border-color: #ffcc00;
+    border-style: solid;
+}
+.news p {
+    margin: 1em;
+    font-size: 1.1em;
+}
+
 body {
     max-width: 42em;
     margin: 0 auto;

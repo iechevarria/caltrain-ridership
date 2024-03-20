@@ -40,6 +40,15 @@ def make_html(path, last_month, html_table):
 <body>
     <h1>Caltrain Ridership</h1>
     <p><em>Last updated: {date.today()}</em></p>    
+    <div class="news">
+        <p>
+            Great news! As of 2024-03-19, Caltrain's website has a ridership page with up-to-date ridership data: <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based</a>.
+        </p>
+        <p>
+            If their ridership stays up to date, I do not plan to continue updating this site, and I plan to make caltrainridership.com redirect to their page.
+        </p>
+    </div>
+    <p>~ ~ ~</p>
     <p>
         This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a> and JPB Citizens Advisory Committee documents.
         Average weekday ridership is reported with a 1-month lag, so the most recent data is from {last_month}.
