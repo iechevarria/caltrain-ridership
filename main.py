@@ -42,26 +42,16 @@ def make_html(path, last_month, html_table):
     <p><em>Last updated: {date.today()}</em></p>    
     <div class="news">
         <p>
-            Great news! As of 2024-03-19, Caltrain's website has a ridership page with up-to-date ridership data: <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based</a>.
-        </p>
-        <p>
-            If their ridership stays up to date, I do not plan to continue updating this site, and I plan to make caltrainridership.com redirect to their page.
+            If you're on desktop, Caltrain's new ridership web page has detailed and mostly up-to-date ridership data: <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based</a>. Unfortunately that page does not work on mobile.
         </p>
     </div>
-    <p>~ ~ ~</p>
     <p>
-        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/past-board-meetings">Caltrain Board of Directors meeting agendas</a> and JPB Citizens Advisory Committee documents.
+        This site contains graphs and a table of Caltrain's average weekday ridership from Jul 2017 to {last_month} sourced from <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">Fare Media Sales-Based Ridership Estimates</a> and JPB Citizens Advisory Committee documents.
         Average weekday ridership is reported with a 1-month lag, so the most recent data is from {last_month}.
     </p>
     <p>
         You can find a <a href="https://github.com/iechevarria/caltrain-ridership/blob/main/ridership.csv">CSV</a> of Caltrain's average weekday ridership and the script to generate this site on <a href="https://github.com/iechevarria/caltrain-ridership">GitHub</a>.
         You can find more of my work on my website, <a href="https://echevarria.io">echevarria.io</a>.
-    </p>
-    <h2>Why I made this</h2>
-    <p>
-        It's surprisingly difficult to get a simple graph or table of Caltrain ridership numbers.
-        Caltrain's official <a href="https://web.archive.org/web/20220629064038/https://www.caltrain.com/about-caltrain/statistics-reports/ridership">ridership page</a> has links to three different sources, only one of which, the Caltrain Board of Directors monthly meeting agendas, is up-to-date.
-        The agenda PDFs are not standardized, so I've manually extracted the ridership numbers from each one and made them available here.
     </p>
     <h2>Graphs</h2>
     <img src="ridership-since-2020.png" alt="Caltrain Ridership">
