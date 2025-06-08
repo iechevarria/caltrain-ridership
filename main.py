@@ -42,7 +42,7 @@ def make_html(path, last_month, html_table):
     <p><em>Last updated: {date.today()}</em></p>    
     <div class="news">
         <p>
-            If you're on desktop, Caltrain's new ridership web page has detailed and mostly up-to-date ridership data: <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based</a>. Unfortunately that page does not work on mobile.
+            It looks like you're on desktop, so you can use Caltrain's new ridership web page which has more detailed ridership data from 2023 onwards: <a href="https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based">https://www.caltrain.com/about-caltrain/statistics-reports/ridership/fare-media-based</a>.
         </p>
     </div>
     <p>

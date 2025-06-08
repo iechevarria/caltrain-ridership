@@ -17,7 +17,9 @@ table tr td:nth-child(2) {
 img {
     width: 100%;
 }
+
 .news {
+    display: none;
     background-color: #ffffcc;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
@@ -27,7 +29,13 @@ img {
 }
 .news p {
     margin: 1em;
-    font-size: 1.1em;
+}
+
+/* Show the news div only on desktop screens */
+@media (min-width: 1024px) {
+    .news {
+        display: block;
+    }
 }
 
 body {
