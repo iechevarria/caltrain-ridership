@@ -1,0 +1,17 @@
+[project]
+name = "caltrain-ridership"
+version = "0.1.0"
+description = "Website that shows Caltrain average weekday ridership data"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib>=3.5.3,<4.0",
+]
+
+[project.urls]
+Homepage = "https://caltrainridership.com/"
+Repository = "https://github.com/iechevarria/caltrain-ridership"
+
+[tool.uv]
+dev-dependencies = []
+package = false
