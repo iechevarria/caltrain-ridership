@@ -12,6 +12,8 @@ dependencies = [
 Homepage = "https://caltrainridership.com/"
 Repository = "https://github.com/iechevarria/caltrain-ridership"
 
+[dependency-groups]
+dev = []
+
 [tool.uv]
-dev-dependencies = []
 package = false
